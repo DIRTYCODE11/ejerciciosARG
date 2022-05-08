@@ -1,7 +1,0 @@
-mov cx,05h
-bucle: 
-    mov ah,09h
-    lea dx,letrero
-    int 21h
-
-    loop bucle

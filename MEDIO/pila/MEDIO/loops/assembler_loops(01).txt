@@ -1,3 +1,0 @@
-your_label:
-  ; your instruccions
-loop your_label
