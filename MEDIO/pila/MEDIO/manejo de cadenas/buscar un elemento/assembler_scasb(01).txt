@@ -1,0 +1,39 @@
+.model small
+.stack
+.data
+    let1 db 10,13,'Found$'
+    let2 db 10,13, 'Not found$'
+    string1 db 'Hack CTF$'
+    size_string equ $ string1
+    character db 'H$'
+.code
+    main proc far
+        mov ax,@data
+        mov ds,ax
+        mov es,ax
+
+        mov cx,size_string
+        lea di,string1
+        mov al,character
+
+        repne scasb
+        je found
+        jne not_found
+
+        found:
+            mov ah,09h
+            lea dx,let1
+            int 21h
+            jmp exit
+        not_found:
+            mov ah,09h
+            lea dx,let2
+            int 21h
+            jmp exit
+        
+        exit:
+        mov ah,4ch
+        int 21h
+
+main endp
+end main
