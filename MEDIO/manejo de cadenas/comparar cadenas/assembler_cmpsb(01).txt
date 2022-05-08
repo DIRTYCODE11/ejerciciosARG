@@ -1,0 +1,37 @@
+.model small
+.stack
+.data
+    let1 db 10,13, 'Equals $'
+    let2 db 10,13, 'Not Equals $'
+    string1 db 'Hi$'
+    string2 db ' His$'
+.code
+    main proc far
+        mov ax,@data
+        mov ds,ax
+        mov es,ax
+       
+        mov cx,3
+        lea si,string1
+        lea di,string2
+
+        repe cmpsb
+        je equals
+        jne not_equals
+
+        equals:
+            mov ah,09h
+            lea dx,let1
+            int 21h
+            jmp exit
+        not_equals:
+            mov ah,09h
+            lea dx,let2
+            int 21h
+            jmp exit
+
+        exit:
+        mov ah,4ch
+        int 21h
+main endp
+end main
