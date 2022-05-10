@@ -1,4 +1,0 @@
-.model small
-.stack
-.data
-    letra db?

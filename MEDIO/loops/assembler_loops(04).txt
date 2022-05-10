@@ -1,8 +1,0 @@
-.code
-   Main proc FAR
-        
-        mov ax, @data
-        mov ds, ax
-        
-        mov cx,0h
-        mov cl,26
