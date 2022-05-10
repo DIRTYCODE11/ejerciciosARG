@@ -1,0 +1,18 @@
+; Addition process
+     
+    mov ax,0
+    mov al,unit1
+    mov bl,unit2
+    add al,bl
+    aam
+    mov r1,al
+    mov carrey,ah
+
+    mov ax,0
+    mov al,ten1
+    mov bl,ten2
+    add al,bl
+    add al,carrey
+    aam
+    mov r2,al
+    mov r3,ah

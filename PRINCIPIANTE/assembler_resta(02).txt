@@ -1,0 +1,36 @@
+;Option 1
+
+sub ah,01h            ; (8 bits)
+
+;Option 2
+
+sub ah,al             ; (8 bits)
+
+;Option 3
+
+sub ah,variable        ; (8 bits)
+
+
+;Option 4
+
+sub variable,al        ; (8 bits)
+
+
+;Option 5
+
+sub ax,bx               ; (16 bits)
+
+
+;Option 6
+
+sub ax,variable         ; (16 bits)
+
+
+;Option 7
+
+sub ax,5                ; (16 bits)
+
+
+;Option 8
+
+sub variable,ax         ; (16 bits)

@@ -1,0 +1,11 @@
+  opcion2:
+     mov ah,06h
+     mov al,00h
+     mov bh,01100000b
+     mov cx,1013h
+     mov dx,153fh
+     int 10h
+
+     mov ah,01h
+     int 21h
+jmp view_menu

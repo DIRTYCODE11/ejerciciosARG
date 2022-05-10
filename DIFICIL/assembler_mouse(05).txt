@@ -1,0 +1,37 @@
+.model small
+.stack
+.data
+     let1 db 'Click me$'
+     coordX dw ?
+     coordY dw ?
+.code
+main proc
+    mov ax,@data
+    mov ds,ax
+
+    mov ah,06h
+    mov bh,00011111b
+    mov al,0
+    mov ch,05d
+    mov cl,25d
+    mov dh,07d
+    mov dl,35d
+    int 10h
+ 
+    mov ah,02h
+    mov dh,06d
+    mov dl,27d
+    mov bh,0h
+    int 10h
+
+    mov ah,09h
+    lea dx,let1
+    int 21h
+
+    mov ax,00h
+    int 33h
+    mov ax,01h
+    int 33h
+
+main endp
+end main

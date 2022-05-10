@@ -1,0 +1,23 @@
+.model small
+.stack
+.data
+        letrero db 'Ingresa un caracter por teclado $'
+.code
+
+     Main proc FAR
+     mov ax,@data
+         mov ds,ax
+         
+         mov ah,09h
+         lea dx,letrero
+         int 21h
+
+         mov ah,01h
+         int 21h
+
+         sub al,30h
+
+         mov ah,4ch
+         int 21h
+main ENDP
+end main

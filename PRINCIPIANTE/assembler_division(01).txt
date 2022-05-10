@@ -1,0 +1,4 @@
+xor ax,ax
+mov al,value1            ;(8 bits)
+mov registro,value2      ;(8 bits)
+div registro             ;(8 bits)

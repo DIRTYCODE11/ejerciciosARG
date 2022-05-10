@@ -1,0 +1,27 @@
+     mov ah,02h
+     mov dl,nl
+     add dl,30h
+     int 21h
+ jmp salida
+ mayor_n2:
+    mov ah,09h
+    lea dx,letrero1
+    int 21h
+
+    mov ah,02h
+    mov dl,n2
+    add dl,30h
+    int 21h
+jmp salida
+
+iguales: 
+    mov ah,09h
+    lea dx,letrero2
+    int 21h
+jmp salida
+
+ salida:
+ mov ah,4ch
+ int 21h
+main ENDP
+end main

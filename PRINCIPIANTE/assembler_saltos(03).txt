@@ -1,0 +1,24 @@
+.model small
+.stack
+.data
+     letrero1 db 'El numero mayor es: $'
+     letrero2 db 'Los numeros son iguales: $'
+     n1 db 4
+     n2 db 5
+.code
+
+     Main proc FAR
+     mov ax,@data
+          mov ds,ax
+          
+          mov al,n1
+          mov ah,n2
+          cmp al,ah
+          je iguales
+          ja mayor_n1
+          jna mayor_n2
+     
+     mayor_n1:
+         mov ah,09h
+         lea dx,letrero1
+         int 21h

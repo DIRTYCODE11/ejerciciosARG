@@ -1,0 +1,9 @@
+second_cicle:
+   mov ah,02h
+   mov dl,symbol
+   int 21h
+   
+   add cl,1
+   cmp cl,cant
+   jl second_cicle
+mov cx,bx

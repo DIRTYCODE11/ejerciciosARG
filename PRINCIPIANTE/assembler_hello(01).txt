@@ -1,0 +1,19 @@
+;Opcion 1
+.model small
+.286
+.stack
+.data
+letrero db 'Hello world $'
+.code
+      main proc far
+          mov ax,@data
+          mov ds,ax
+
+          mov ah,09h
+          lea dx,letrero
+          int 21h
+
+          mov ah,4ch
+          int 21h
+main endp
+end main

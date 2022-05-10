@@ -1,0 +1,10 @@
+Ingresa un numero: 3
+Ingresa un numero: 2
+¿Que deseas hacer con esos numeros?
+1.Sumarlos
+2.Restarlos
+3.Dividirlos
+4.Multiplicarlos
+5.Determinar quien es menor
+Selecciona una opcion: 5
+El numero menor es el 2

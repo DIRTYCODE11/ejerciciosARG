@@ -1,0 +1,8 @@
+.model small
+.stack
+.data
+     symbol db '*'
+     col db 28h
+     row db 0h
+     rows db 05h
+     cant db 01h

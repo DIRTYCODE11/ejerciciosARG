@@ -1,0 +1,4 @@
+xor ax,ax
+mov ax,value1       ;(16 bits)
+mov registro,value2 ;(16 bits)
+div registro        ;(16 bits)

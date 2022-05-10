@@ -1,0 +1,27 @@
+.model small
+.stack
+.data
+.code
+  main proc
+     mov ax,@data
+     mov ds,ax
+
+     mov ah,00h
+     mov al,03h
+     int 10h
+     mov ax,00h
+     int 33h
+     mov ax,01h
+     int 33h
+
+     mov ax,07h
+     mov cx,01h
+     mov dx,600d
+     int 33h
+
+     mov ax,08h
+     mov cx,1d
+     mov dx,100d
+     int 33h
+main endp
+end main

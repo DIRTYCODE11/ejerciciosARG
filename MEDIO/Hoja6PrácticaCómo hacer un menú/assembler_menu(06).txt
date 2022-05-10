@@ -1,0 +1,6 @@
+   opcion3:
+       mov ah,4ch
+       int 21h
+jmp view_menu
+main endp
+end main

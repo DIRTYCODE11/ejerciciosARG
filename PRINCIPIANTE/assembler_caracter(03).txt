@@ -1,0 +1,3 @@
+mov ah,02h
+mov dl,34h
+int 21h

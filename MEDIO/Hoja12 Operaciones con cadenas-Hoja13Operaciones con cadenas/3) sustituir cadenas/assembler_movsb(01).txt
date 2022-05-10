@@ -1,0 +1,34 @@
+.model small
+.stack
+.data
+    let1 db 'Hello$'
+    let2 db 'Bye$'
+    space db 10,13,'$'
+.code
+    main proc far
+         mov ax,@data
+         mov ds,ax
+         mov es,ax
+
+         mov ah,09h
+         lea dx,let1
+         int 21h
+
+         lea di,let1
+         lea si,let2
+         mov cx,3
+
+         rep movsb
+
+         mov ah,09h
+         mov dx,offset space
+         int 21h
+
+         lea dx,let1
+         int 21h
+
+         mov ah,4ch
+         int 21h
+.exit
+main endp
+end main

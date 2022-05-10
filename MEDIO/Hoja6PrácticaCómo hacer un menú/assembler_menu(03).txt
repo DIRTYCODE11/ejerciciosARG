@@ -1,0 +1,18 @@
+     mov ah,01h
+     int 21h
+
+     cmp al,31h
+     je sub_opcion1
+     cmp al,32h
+     je sub_opcion2
+     cmp al,33h
+     je sub_opcion3
+     cmp al,34h
+  jmp view_menu
+
+    sub_opcion1:
+       jmp opcion1
+    sub_opcion2:
+       jmp opcion2
+    sub_opcion3:
+       jmp opcion3

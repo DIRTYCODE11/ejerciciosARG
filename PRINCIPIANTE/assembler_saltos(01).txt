@@ -1,0 +1,31 @@
+.model small
+.stack
+.data 
+      letrero1 db 'Saltar a la opcion 1$'
+      letrero2 db 'Saltar a la opcion 2$'
+.code
+   Main proc FAR
+   mov ax,@data
+        mov ds,ax
+
+        jmp mostrar_opcion2
+
+         mostrar_opcion1:
+            mov ah,09h
+            lea dx,letrero1
+            int 21h
+        jmp salida
+
+   mostrar_opcion2:
+            mov ah,09h
+            lea dx,letrero2
+            int 21h
+        jmp salida
+
+        salida:
+        mov ah,4ch
+        int 21h
+
+main ENDP
+end main
+

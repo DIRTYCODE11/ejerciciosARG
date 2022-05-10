@@ -1,0 +1,30 @@
+.code 
+main proc FAR
+     mov ax,@data
+     mov ds,ax
+     view_menu:
+         mov ah,00h
+         mov al,03h
+         int 10h
+
+         mov ah,06h
+         mov al,00h
+         mov bh,02h
+         mov cx,0008h
+         mov dx,184fh
+         int 10h
+
+         mov ah,02h
+         mov bh,00h
+         mov dx,0000h
+         int 10h
+
+         mov ah,09h
+         lea dx,let1
+         int 21h
+
+         lea dx,let2
+         int 21h
+ 
+         lea dx,let3
+         int 21h

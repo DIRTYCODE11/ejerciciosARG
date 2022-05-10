@@ -1,0 +1,10 @@
+xor cx, cx
+first_cicle:
+     mov ah,02h
+     mov bh,00h
+     mov dh,row
+     mov dl,col
+     int 10h
+
+     mov bx,cx
+     xor cx,cx

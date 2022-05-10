@@ -1,0 +1,14 @@
+;Opcion 1
+.model small
+.286
+.stack
+.data
+.code
+    main proc far
+    mov ax,@data
+
+    mov ds,ax
+       ;Your code here/ tu código aqui
+
+    main endp
+    end main

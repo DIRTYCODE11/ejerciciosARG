@@ -1,0 +1,5 @@
+.model small
+.data
+    let db 10,13,'1.Change Screen color $'
+    let2 db 10,13,'2.Draw a rectangle $'
+    let3 db 10,13,'3.Exit$'

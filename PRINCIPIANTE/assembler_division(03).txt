@@ -1,0 +1,31 @@
+     xor ax,ax
+     mov al,n1
+     mov bl,n2
+     div bl
+     mov result,al
+     mov residuo,ah
+
+     add result,30h
+     add residuo,48d
+
+     ;Result
+     mov ah,09h
+     lea dx,letrero2
+     int 21h
+
+     mov ah,02h
+     mov dl,result
+     int 21h
+
+     mov ah,09h
+     lea dx,letrero3
+     int 21h
+
+     mov ah,02h
+     mov dl,residuo
+     int 21h
+
+     mov ah,4ch
+     int 21h
+main ENDP
+end main

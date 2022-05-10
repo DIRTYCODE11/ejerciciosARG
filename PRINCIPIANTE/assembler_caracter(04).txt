@@ -1,0 +1,6 @@
+.data
+   digito db 4
+.code
+   mov ah,02h
+   mov dl,digito
+   int 21h

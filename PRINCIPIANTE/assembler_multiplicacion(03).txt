@@ -1,0 +1,29 @@
+.model small
+.stack
+.data
+      letrero  db 10,13,'Resultado Multiplicacion: $'
+      letrero2 db 10,13,'Resultado Division: $'
+      letrero3 db 10,13,'Residuo Division: $'
+      n1 db 4
+      n2 db 2
+      result  db ?
+      residuo db ?
+.code
+
+    Main proc FAR
+    mov ax, @data
+         mov ds,ax
+
+         mov al,n1
+         mov bl,n2
+         mul b1
+         mov result,al
+         add result,30h
+
+         mov ah,09h
+         lea dx,letrero
+         int 21h
+
+         mov ah,02h
+         mov dl,result
+         int 21h

@@ -1,0 +1,12 @@
+.model small
+.stack
+.data
+    let1 db 10,13,'Entry a number (2 digits) Example:(01,10,23,05)','$'
+    let2 db 10,13,'Result is: ','$'
+    unit1 db ?
+    ten1  db ?
+    unit2 db ?
+    ten2  db ?
+    carrey db ?
+    r1 db ?
+    r2 db ?

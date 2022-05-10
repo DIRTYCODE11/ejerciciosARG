@@ -1,0 +1,26 @@
+.286
+pila segment stack
+   db 32 DUP ('stack--')
+pila ends
+
+datos segment
+      letrero db 'Ingresa un caracter por teclado: $'
+datos ends
+codigo segment 'code'
+     Main proc FAR
+     assume ss:pila, ds: datos, cs:codigo
+          mov ax,datos
+          mov ds,ax
+
+          mov ah,09h
+          lea dx,letrero
+          int 21h 
+
+          mov ah,01h
+          int 21h
+
+          mov ah,4ch
+          int 21h
+main ENDP
+codigo ends
+end main

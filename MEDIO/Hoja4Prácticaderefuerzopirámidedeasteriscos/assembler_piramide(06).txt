@@ -1,0 +1,14 @@
+   sub col,1
+   add row,1
+
+   add cant,2
+   add cl,1
+
+   cmp cl,rows
+   jl first_cicle
+
+mov ah,4ch
+int 21h
+
+main ENDP
+end main

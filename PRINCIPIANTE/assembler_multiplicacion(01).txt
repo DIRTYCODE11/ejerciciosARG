@@ -1,0 +1,3 @@
+mov al,value1         ; (8 bits)
+mov registro,value2   ; (8 bits)
+mul registro          ; (8 bits)

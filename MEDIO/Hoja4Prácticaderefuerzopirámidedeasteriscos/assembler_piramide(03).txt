@@ -1,0 +1,8 @@
+.code
+   Main proc FAR
+   mov ax,@data
+   mov ds,ax
+
+   mov ah,00h
+   mov al,06h
+   int 10h
